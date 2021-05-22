@@ -1,8 +1,13 @@
 <template>
   <div id="app">
+    <header>
+      <div>
+        <span id="logo">ProRadis Challenge</span>
+      </div>
+    </header>
     <div id="nav">
       <router-link to="/">Cadastro Vacinas</router-link> |
-      <router-link to="/registerUser">Cadastro Usuário</router-link> |
+      <router-link to="/registerPatient">Cadastro Paciente</router-link> |
       <router-link to="/registerDose">Registro de Doses</router-link>
     </div>
     <router-view />

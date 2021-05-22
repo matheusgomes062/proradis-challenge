@@ -13,10 +13,12 @@ const routes = [
       )
   },
   {
-    path: '/registerUser',
-    name: 'RegisterUser',
+    path: '/registerPatient',
+    name: 'RegisterPatient',
     component: () =>
-      import(/* webpackChunkName: "registerUser" */ '../views/RegisterUser.vue')
+      import(
+        /* webpackChunkName: "registerPatient" */ '../views/RegisterPatient.vue'
+      )
   },
   {
     path: '/registerDose',
