@@ -1,9 +1,20 @@
 <template>
-  <div></div>
+  <div class="container">
+    <div class="mainContent">
+      <FormWizard />
+    </div>
+  </div>
 </template>
 
 <script>
-export default {};
+import FormWizard from '@/components/FormWizards/FormWizardRegisterVaccine/FormWizard.vue';
+
+export default {
+  name: 'registerPatient',
+  components: {
+    FormWizard
+  }
+};
 </script>
 
 <style></style>

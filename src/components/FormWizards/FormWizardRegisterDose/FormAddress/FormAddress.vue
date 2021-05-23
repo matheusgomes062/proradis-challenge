@@ -112,7 +112,7 @@ export default {
       this.$v.$reset();
     },
     submit() {
-      this.$v.touch();
+      this.$v.$touch();
 
       return new Promise((resolve) => {
         resolve(true);

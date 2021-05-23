@@ -30,19 +30,20 @@
       </div>
     </div>
 
-    <div v-else>
+    <div v-else class="thankYouContainer">
       <h1 class="title">Obrigado!</h1>
       <h2 class="subtitle">
-        Iremos entrar em contato para informar sobre sua vacina!
+        Paciente registrado!
       </h2>
+      <div>😎🎉</div>
     </div>
 
-    <div class="loading-wrapper" v-if="asyncState === 'pending'">
+    <!-- <div class="loading-wrapper" v-if="asyncState === 'pending'">
       <div class="loader">
         <img src="/spinner.svg" alt="" />
         <p>Aguarde! Estamos nos comunicando com nossos servidores!</p>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

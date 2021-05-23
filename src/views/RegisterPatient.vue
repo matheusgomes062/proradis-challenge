@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import FormWizard from '@/components/FormWizard/FormWizard.vue';
+import FormWizard from '@/components/FormWizards/FormWizardRegisterPatient/FormWizard.vue';
 
 export default {
   name: 'registerPatient',
