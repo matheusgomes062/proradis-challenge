@@ -35,12 +35,6 @@
       <h2 class="subtitle">
         Iremos entrar em contato para informar sobre sua vacina!
       </h2>
-
-      <p class="text-center">
-        <a href="https://vueschool.io" target="_blank" class="btn"
-          >Go somewhere cool!</a
-        >
-      </p>
     </div>
 
     <div class="loading-wrapper" v-if="asyncState === 'pending'">
@@ -53,28 +47,19 @@
 </template>
 
 <script>
-import FormVaccinePicker from './FormVaccinePicker';
-import FormPatientDetails from './FormPatientDetails';
-import FormAddress from './FormAddress';
-import FormReviewOrder from './FormReviewOrder';
+import FormPatientDetails from './FormPatientDetails/FormPatientDetails';
+import FormAddress from './FormAddress/FormAddress';
 export default {
   name: 'FormWizard',
   components: {
     FormPatientDetails,
-    FormVaccinePicker,
-    FormAddress,
-    FormReviewOrder
+    FormAddress
   },
   data() {
     return {
       currentStepNumber: 1,
       asyncState: null,
-      steps: [
-        'FormPatientDetails',
-        'FormAddress',
-        'FormVaccinePicker',
-        'FormReviewOrder'
-      ],
+      steps: ['FormPatientDetails', 'FormAddress'],
       form: {
         name: null,
         cpf: null,
@@ -108,11 +93,9 @@ export default {
     },
     submitRegister() {
       this.asyncState = 'pending';
-      // postFormToDB(this.form).then(() => {
       console.log('form submitted', this.form);
       this.asyncState = 'success';
       this.currentStepNumber++;
-      // });
     },
     nextButtonAction() {
       this.$refs.currentStep

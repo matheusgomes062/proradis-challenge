@@ -1,5 +1,5 @@
 <template>
-  <div id="app" class="container">
+  <div class="container">
     <div class="mainContent">
       <FormWizard />
     </div>

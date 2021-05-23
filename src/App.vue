@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <header>
+    <header id="logo">
       <div>
-        <span id="logo">ProRadis Challenge</span>
+        <span>ProRadis Challenge</span>
       </div>
     </header>
     <div id="nav">
@@ -21,6 +21,12 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+  min-height: 140vh;
+}
+
+#logo {
+  font-size: 3em;
+  padding: 30px;
 }
 
 #nav {
