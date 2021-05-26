@@ -77,6 +77,7 @@ Porém, quero deixar aqui a rota que tomei ao desenvolver tais projetos.
 1. Boilerplate com Vue 2 + Sass + commitlint e jest (FEITO)
 2. Desenvolvimento utilizando melhores práticas e formwizards (FEITO)
 3. Desenvolvimento de testes unitários utilizando Jest (  )
+4. Requests - Axios ( Estava planejando fazer após o back)
 
 ## Back
 1. Estudo sobre APIs e desenvolvimento robusto das mesmas. (FEITO -> Curso utilizado https://www.udemy.com/course/criando-apis-robustas-em-c)
