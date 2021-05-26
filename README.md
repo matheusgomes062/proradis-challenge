@@ -30,7 +30,6 @@ yarn run build
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-```
 
 ## Desafio Técnico Dev Adv
 
@@ -87,3 +86,7 @@ Porém, quero deixar aqui a rota que tomei ao desenvolver tais projetos.
 4. Desenvolvimento de testes unitários utilizando MOQ ou XUnity. (  )
 
 No final das contas, acredito que foi um grande aprendizado, no entanto ocorreram imprevistos que permitiram descobrir minha própria capacidade como desenvolvedor e onde tenho que melhorar.
+
+Link dos outros dois projetos de back end:
+1- https://github.com/matheusgomes062/proradis-challenge-back
+2- https://github.com/matheusgomes062/VaccineAPI
