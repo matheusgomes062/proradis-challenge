@@ -32,8 +32,8 @@ yarn run build
 See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 
-
 ## Desafio Técnico Dev Adv
+
 ### Vacinação Covid-19
 Este desafio consiste em desenvolver um protótipo de aplicação que aborde a temática de vacinação contra COVID-19. Os principais objetivos são: construir um cadastro de vacinas, cadastrar pacientes, e registrar a aplicação de doses. Algumas regras de negócio deverão ser aplicadas para controlar este fluxo. Estas serão estabelecidas na seção 2 (Requisitos).
 
@@ -63,4 +63,27 @@ A aplicação deverá ter como funcionalidades:
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
-# proradis-challenge
+
+# Important Info!
+
+Projeto iniciado no sábado (22/05/2021).
+
+Inicialmente eu concentrei meus esforços no front end, este levou cerca de 4 horas de desenvolvimento (pois é minha área de maior facilidade), ao iniciar o back-end, eu percebi que ainda estava muito aquém do necessário para efetuar o projeto, portanto ao começar um projeto descobri que o .NET utilizado era o errado (Framework não funciona no MacOs), assim depois de começar um projeto utilzando o datado .NET Framework tive que iniciar outro utilizando o mais recente .NET Core.
+
+Porém mesmo com meus esforços e ajuda de alguns amigos, não foi possível finalizar o processo de desenvolvimento do back-end...
+
+Porém, quero deixar aqui a rota que tomei ao desenvolver tais projetos.
+
+## Front
+1. Boilerplate com Vue 2 + Sass + commitlint e jest (FEITO)
+2. Desenvolvimento utilizando melhores práticas e formwizards (FEITO)
+3. Desenvolvimento de testes unitários utilizando Jest (  )
+
+## Back
+1. Estudo sobre APIs e desenvolvimento robusto das mesmas. (FEITO -> Curso utilizado https://www.udemy.com/course/criando-apis-robustas-em-c)
+2. Desenvolvimento da API (FEITO PARCIALMENTE)
+2.1 Descobrir que o .NET Framework não funciona para MacOs (FEITO 100%)
+3. Entender a estrutura utilização de um ORM. (  )
+4. Desenvolvimento de testes unitários utilizando MOQ ou XUnity. (  )
+
+No final das contas, acredito que foi um grande aprendizado, no entanto ocorreram imprevistos que permitiram descobrir minha própria capacidade como desenvolvedor e onde tenho que melhorar.
