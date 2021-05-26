@@ -84,9 +84,11 @@ Porém, quero deixar aqui a rota que tomei ao desenvolver tais projetos.
 2.1 Descobrir que o .NET Framework não funciona para MacOs (FEITO 100%)
 3. Entender a estrutura utilização de um ORM. (  )
 4. Desenvolvimento de testes unitários utilizando MOQ ou XUnity. (  )
+5. Aprender e Utilizar o Docker para a utilização do Postgresql (OK)
 
 No final das contas, acredito que foi um grande aprendizado, no entanto ocorreram imprevistos que permitiram descobrir minha própria capacidade como desenvolvedor e onde tenho que melhorar.
 
 Link dos outros dois projetos de back end:
 1- https://github.com/matheusgomes062/proradis-challenge-back
+
 2- https://github.com/matheusgomes062/VaccineAPI
