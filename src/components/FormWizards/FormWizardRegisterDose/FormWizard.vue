@@ -10,9 +10,9 @@
         ></component>
       </keep-alive>
 
-      <div class="progress-bar">
+      <!-- <div class="progress-bar">
         <div :style="`width: ${progress}%;`"></div>
-      </div>
+      </div> -->
 
       <!-- Actions -->
       <div class="buttons">
@@ -30,11 +30,12 @@
       </div>
     </div>
 
-    <div v-else>
+    <div v-else class="thankYouContainer">
       <h1 class="title">Obrigado!</h1>
       <h2 class="subtitle">
-        Paciente registrado!
+        Aplicação registrada!
       </h2>
+      <div>💉🩺🎉</div>
     </div>
 
     <!-- <div class="loading-wrapper" v-if="asyncState === 'pending'">
@@ -47,19 +48,17 @@
 </template>
 
 <script>
-import FormPatientDetails from './FormPatientDetails/FormPatientDetails';
-import FormAddress from './FormAddress/FormAddress';
+import FormDoseDetails from './FormDoseDetails/FormDoseDetails';
 export default {
   name: 'FormWizard',
   components: {
-    FormPatientDetails,
-    FormAddress
+    FormDoseDetails
   },
   data() {
     return {
       currentStepNumber: 1,
       asyncState: null,
-      steps: ['FormPatientDetails', 'FormAddress'],
+      steps: ['FormDoseDetails'],
       form: {
         name: null,
         cpf: null,

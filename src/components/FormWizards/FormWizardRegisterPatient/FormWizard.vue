@@ -63,11 +63,14 @@ export default {
       steps: ['FormPatientDetails', 'FormAddress'],
       form: {
         name: null,
+        email: null,
         cpf: null,
         birthdate: null,
-        email: null,
-        address: null,
-        comorbidity: null
+        comorbidity: null,
+        address = null,
+        district = null,
+        state = null,
+        city = null
       }
     };
   },

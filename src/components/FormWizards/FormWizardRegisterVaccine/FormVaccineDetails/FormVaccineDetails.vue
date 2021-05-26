@@ -63,16 +63,16 @@
         </div>
       </div>
       <div class="form-group">
-        <label class="form-label" for="dosesNumber">Número de doses</label>
+        <label class="form-label" for="numberOfDoses">Número de doses</label>
         <input
-          v-model="$v.form.dosesNumber.$model"
+          v-model="$v.form.numberOfDoses.$model"
           type="number"
           placeholder="Doses necessárias"
           class="form-control"
-          id="dosesNumber"
+          id="numberOfDoses"
         />
         <div
-          v-if="$v.form.dosesNumber.$error && !$v.form.dosesNumber.required"
+          v-if="$v.form.numberOfDoses.$error && !$v.form.numberOfDoses.required"
           class="error"
         >
           Número de doses necessária!
@@ -118,7 +118,7 @@ export default {
         manufacturer: null,
         batch: null,
         dueDate: null,
-        dosesNumber: null,
+        numberOfDoses: null,
         intervalBetweenDoses: null
       }
     };
@@ -138,7 +138,7 @@ export default {
       dueDate: {
         required
       },
-      dosesNumber: {
+      numberOfDoses: {
         required
       },
       intervalBetweenDoses: {
@@ -149,9 +149,10 @@ export default {
   methods: {
     reset() {
       this.form.name = null;
+      this.form.manufacturer = null;
       this.form.batch = null;
       this.form.dueDate = null;
-      this.form.dosesNumber = null;
+      this.form.numberOfDoses = null;
       this.form.intervalBetweenDoses = null;
       this.$v.$reset();
     },

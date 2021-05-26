@@ -10,9 +10,9 @@
         ></component>
       </keep-alive>
 
-      <div class="progress-bar">
+      <!-- <div class="progress-bar">
         <div :style="`width: ${progress}%;`"></div>
-      </div>
+      </div> -->
 
       <!-- Actions -->
       <div class="buttons">
@@ -60,9 +60,9 @@ export default {
       asyncState: null,
       steps: ['FormVaccineDetails'],
       form: {
+        name: null,
         manufacturer: null,
         batch: null,
-        birthdate: null,
         dueDate: null,
         numberOfDoses: null,
         intervalBetweenDoses: null

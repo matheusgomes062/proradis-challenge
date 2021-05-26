@@ -1,28 +1,35 @@
-# proradis-challenge
+proradis-challenge
+===============
 
-## Project setup
+## Prerequisites
+You will need [Node.js](https://nodejs.org) version 6.0 or greater installed on your system.
+
+## Setup
+
+Get the code by either cloning this repository using git
+
+    > git clone https://github.com/matheusgomes062/proradis-challenge
+
+... or [downloading source code](https://github.com/matheusgomes062/proradis-challenge/archive/refs/heads/main.zip) code as a zip archive.
+
+Once downloaded, open the terminal in the project directory, and continue with:
+
 ```
 yarn install
 ```
 
 ### Compiles and hot-reloads for development
 ```
-yarn serve
+yarn run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+yarn run build
 ```
 
-### Run your unit tests
-```
-yarn test:unit
-```
-
-### Lints and fixes files
-```
-yarn lint
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
 ```
 
 

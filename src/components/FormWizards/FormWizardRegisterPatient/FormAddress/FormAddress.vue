@@ -81,6 +81,7 @@ export default {
     return {
       form: {
         address: null,
+        district: null,
         state: null,
         city: null
       }
