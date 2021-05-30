@@ -49,6 +49,8 @@
 
 <script>
 import FormVaccineDetails from './FormVaccineDetails/FormVaccineDetails';
+import { api } from '@/services/index';
+
 export default {
   name: 'FormWizard',
   components: {
@@ -92,9 +94,23 @@ export default {
     },
     submitRegister() {
       this.asyncState = 'pending';
-      console.log('form submitted', this.form);
-      this.asyncState = 'success';
-      this.currentStepNumber++;
+      api
+        .post('/Vaccines', this.form)
+        .then((response) => {
+          console.log('response: ' + response);
+          console.log('vaccine before form submitted');
+          if (response.status == 200) {
+            console.log('vaccine form submitted');
+            this.asyncState = 'success';
+            this.currentStepNumber++;
+            this.$vToastify.success('Paciente registrado!');
+          } else {
+            this.$vToastify.error('Não foi possível registrar');
+          }
+        })
+        .catch((error) => {
+          console.log(error.response);
+        });
     },
     nextButtonAction() {
       this.$refs.currentStep

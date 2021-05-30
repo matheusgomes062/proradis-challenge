@@ -108,6 +108,12 @@ import { required } from 'vuelidate/lib/validators';
 import Datepicker from 'vuejs-datepicker';
 
 export default {
+  props: {
+    wizardData: {
+      type: Object,
+      required: true
+    }
+  },
   components: {
     Datepicker
   },
@@ -158,12 +164,20 @@ export default {
     },
     submit() {
       this.$v.$touch();
-
-      if (!this.$v.$invalid) {
-        return new Promise((resolve) => {
-          resolve(true);
-        });
-      }
+      return new Promise((resolve, reject) => {
+        if (!this.$v.$invalid) {
+          resolve({
+            name: this.form.name,
+            manufacturer: this.form.manufacturer,
+            batch: this.form.batch,
+            dueDate: this.form.dueDate,
+            numberOfDoses: this.form.numberOfDoses,
+            intervalBetweenDoses: this.form.intervalBetweenDoses
+          });
+        } else {
+          reject('invalid patient');
+        }
+      });
     }
   }
 };

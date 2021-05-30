@@ -92,7 +92,7 @@ export default {
     },
     submitRegister() {
       this.asyncState = 'pending';
-      console.log('form submitted', this.form);
+      console.log('dose form submitted', this.form);
       this.asyncState = 'success';
       this.currentStepNumber++;
     },

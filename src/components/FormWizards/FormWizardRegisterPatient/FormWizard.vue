@@ -67,10 +67,10 @@ export default {
         cpf: null,
         birthdate: null,
         comorbidity: null,
-        address = null,
-        district = null,
-        state = null,
-        city = null
+        address: null,
+        district: null,
+        state: null,
+        city: null
       }
     };
   },
@@ -97,7 +97,7 @@ export default {
     },
     submitRegister() {
       this.asyncState = 'pending';
-      console.log('form submitted', this.form);
+      console.log('patient form submitted', this.form);
       this.asyncState = 'success';
       this.currentStepNumber++;
     },
