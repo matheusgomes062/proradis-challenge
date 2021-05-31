@@ -4,7 +4,9 @@ import router from './router';
 import store from './store';
 import vuelidate from 'vuelidate';
 import VueToastify from 'vue-toastify';
+import VueTheMask from 'vue-the-mask';
 
+Vue.use(VueTheMask);
 Vue.use(vuelidate);
 Vue.use(VueToastify, {
   canTimeout: true,

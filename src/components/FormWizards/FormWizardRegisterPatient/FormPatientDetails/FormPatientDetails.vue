@@ -22,12 +22,20 @@
       </div>
       <div class="form-group">
         <label class="form-label" for="cpf">Cpf do paciente</label>
-        <input
+        <!-- <input
           v-model="$v.form.cpf.$model"
           type="text"
           placeholder="Qual o cpf do paciente?"
           class="form-control"
           id="cpf"
+        /> -->
+        <the-mask
+          v-model="$v.form.cpf.$model"
+          type="text"
+          placeholder="Qual o cpf do paciente?"
+          class="form-control"
+          id="cpf"
+          :mask="['###.###.###-##']"
         />
         <div v-if="$v.form.cpf.$error && !$v.form.cpf.required" class="error">
           CPF necessário!
@@ -99,10 +107,12 @@
 <script>
 import { required, email } from 'vuelidate/lib/validators';
 import Datepicker from 'vuejs-datepicker';
+import { TheMask } from 'vue-the-mask';
 
 export default {
   components: {
-    Datepicker
+    Datepicker,
+    TheMask
   },
   data() {
     return {
