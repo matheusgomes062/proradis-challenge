@@ -115,11 +115,7 @@ export default {
       }
     };
   },
-  computed: {
-    loggedIn() {
-      return this.existingUser && this.form.name;
-    }
-  },
+  computed: {},
   validations: {
     form: {
       name: {
@@ -151,12 +147,19 @@ export default {
     },
     submit() {
       this.$v.$touch();
-
-      if (!this.$v.$invalid) {
-        return new Promise((resolve) => {
-          resolve(true);
-        });
-      }
+      return new Promise((resolve, reject) => {
+        if (!this.$v.$invalid) {
+          resolve({
+            name: this.form.name,
+            email: this.form.email,
+            cpf: this.form.cpf,
+            birthdate: this.form.birthdate,
+            comorbidity: this.form.comorbidity
+          });
+        } else {
+          reject('invalid patient detail');
+        }
+      });
     }
   }
 };

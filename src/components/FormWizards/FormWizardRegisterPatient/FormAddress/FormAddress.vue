@@ -76,6 +76,12 @@
 import { required } from 'vuelidate/lib/validators';
 
 export default {
+  props: {
+    wizardData: {
+      type: Object,
+      required: true
+    }
+  },
   components: {},
   data() {
     return {
@@ -114,12 +120,18 @@ export default {
     },
     submit() {
       this.$v.$touch();
-
-      if (!this.$v.$invalid) {
-        return new Promise((resolve) => {
-          resolve(true);
-        });
-      }
+      return new Promise((resolve, reject) => {
+        if (!this.$v.$invalid) {
+          resolve({
+            address: this.form.address,
+            district: this.form.district,
+            state: this.form.state,
+            city: this.form.city
+          });
+        } else {
+          reject('invalid vaccine detail');
+        }
+      });
     }
   }
 };

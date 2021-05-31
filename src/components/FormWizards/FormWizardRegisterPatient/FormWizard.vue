@@ -50,8 +50,10 @@
 <script>
 import FormPatientDetails from './FormPatientDetails/FormPatientDetails';
 import FormAddress from './FormAddress/FormAddress';
+import { api } from '@/services/index';
+
 export default {
-  name: 'FormWizard',
+  name: 'FormWizardPatient',
   components: {
     FormPatientDetails,
     FormAddress
@@ -97,9 +99,23 @@ export default {
     },
     submitRegister() {
       this.asyncState = 'pending';
-      console.log('patient form submitted', this.form);
-      this.asyncState = 'success';
-      this.currentStepNumber++;
+      api
+        .post('/Patients', this.form)
+        .then((response) => {
+          if (response.status == 200) {
+            console.log(response);
+            console.log('Patient form submited');
+            this.asyncState = 'success';
+            this.currentStepNumber++;
+            this.$vToastify.success('Paciente registrado!');
+          } else {
+            this.$vToastify.error('Não foi possível registrar...');
+          }
+        })
+        .catch((error) => {
+          console.log(error.response);
+          this.$vToastify.error('Não foi possível registrar...');
+        });
     },
     nextButtonAction() {
       this.$refs.currentStep

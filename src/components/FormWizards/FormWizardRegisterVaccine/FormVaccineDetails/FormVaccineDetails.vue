@@ -175,7 +175,7 @@ export default {
             intervalBetweenDoses: this.form.intervalBetweenDoses
           });
         } else {
-          reject('invalid patient');
+          reject('invalid vaccine');
         }
       });
     }
