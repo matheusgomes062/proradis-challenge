@@ -112,6 +112,7 @@ Não satisfeito com o resultado, decidi mais uma vez recomeçar o projeto, dessa
 - Vuejs-datepicker
 - Vuelidate
 - Vuex
+- Deploy automático no [Vercel](https://proradis-challenge.vercel.app/)
 
 A ideia do desenvolvimento do front-end foi utilizar fortemente código limpo e FormWizards, ou seja, o foco seria em ter uma aplicação que não dependese de rotas para trocar de component, assim utilizei o famoso form-wizard para gerenciar os components de formulário. Não só isso mas tudo que era possível componentizar eu componentizei. As próprias requests utilizando axios foram feitas de forma a não repetir código.
 
@@ -126,4 +127,13 @@ No que me comprometi faltou apenas desenvolver testes unitários, aplicar alguma
 ### Back
 - ASP.NET Core 3.1
 - Walking Skeleton
-- 
+- Entity Framework Core
+- Seeding
+- Sqlite
+- Postgresql
+- CQRS Pattern
+- Mediator
+- ILogger
+- CORS
+- Deploy automático no [Heroku](https://salty-anchorage-84863.herokuapp.com/)
+- [SecurityHeaders Nota A](https://securityheaders.com/?q=https%3A%2F%2Fsalty-anchorage-84863.herokuapp.com%2F&followRedirects=on)
