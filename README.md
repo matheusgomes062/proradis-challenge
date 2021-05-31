@@ -2,28 +2,28 @@ proradis-challenge
 ===============
 
 ## Prerequisites
-You will need [Node.js](https://nodejs.org) version 6.0 or greater installed on your system.
+Você irá precisar do [Node.js](https://nodejs.org) versão 6.0 ou maior instalada no seu sistema.
 
 ## Setup
 
-Get the code by either cloning this repository using git
+Pegue o código colando este repositório ou usando o git
 
     > git clone https://github.com/matheusgomes062/proradis-challenge
 
-... or [downloading source code](https://github.com/matheusgomes062/proradis-challenge/archive/refs/heads/main.zip) code as a zip archive.
+... ou [baixando o código fonte](https://github.com/matheusgomes062/proradis-challenge/archive/refs/heads/main.zip) como um arquivo zip.
 
-Once downloaded, open the terminal in the project directory, and continue with:
+Uma vez baixado, abra o terminal e execute o seguinte comando para instalar as dependências:
 
 ```
 yarn install
 ```
 
-### Compiles and hot-reloads for development
+### Compila e dá hot-reload para desenvolvimento
 ```
 yarn run serve
 ```
 
-### Compiles and minifies for production
+### Compila minify para produção
 ```
 yarn run build
 ```
@@ -31,7 +31,7 @@ yarn run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-## Desafio Técnico Dev Adv
+## Desafio Técnico Dev ProRadis
 
 ### Vacinação Covid-19
 Este desafio consiste em desenvolver um protótipo de aplicação que aborde a temática de vacinação contra COVID-19. Os principais objetivos são: construir um cadastro de vacinas, cadastrar pacientes, e registrar a aplicação de doses. Algumas regras de negócio deverão ser aplicadas para controlar este fluxo. Estas serão estabelecidas na seção 2 (Requisitos).
@@ -60,37 +60,70 @@ A aplicação deverá ter como funcionalidades:
 - Não deverá ser possível vacinar um paciente com doses de fabricantes diferentes 
 - Stack de desenvolvimento: Backend C#/Asp.net core ou PHP, front-end Vuejs
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
-
-# Important Info!
+# Informações importantes!
 
 Projeto iniciado no sábado (22/05/2021).
+Finalizado dia 31 de Maio.
+Total: 10 dias corridos.
+Total líquido: 8 dias.
 
-Inicialmente eu concentrei meus esforços no front end, este levou cerca de 4 horas de desenvolvimento (pois é minha área de maior facilidade), ao iniciar o back-end, eu percebi que ainda estava muito aquém do necessário para efetuar o projeto, portanto ao começar um projeto descobri que o .NET utilizado era o errado (Framework não funciona no MacOs), assim depois de começar um projeto utilzando o datado .NET Framework tive que iniciar outro utilizando o mais recente .NET Core.
+## Explicação do tempo de desenvolvimento
+Inicialmente eu concentrei meus esforços no front-end, este levou cerca de 4 horas de desenvolvimento (pois é minha área de maior facilidade), ao iniciar o back-end, eu percebi que ainda estava muito aquém do necessário para efetuar o projeto, portanto ao começar um projeto descobri que o .NET utilizado era o errado (Framework não funciona no MacOs), assim depois de começar o projeto utilzando o datado .NET Framework tive que iniciar outro utilizando o mais recente .NET Core.
 
-Porém mesmo com meus esforços e ajuda de alguns amigos, não foi possível finalizar o processo de desenvolvimento do back-end...
+Porém o tempo correu rápido e não consegui desenvolver inicialmente essa nova API, até tentei utilizar um boilerplate, mas não foi o suficiente.
 
-Porém, quero deixar aqui a rota que tomei ao desenvolver tais projetos.
+Decidi entregar no dia 26/05 com o front-end 70% e o back-end 30%.
 
-## Front
-1. Boilerplate com Vue 2 + Sass + commitlint e jest (FEITO)
-2. Desenvolvimento utilizando melhores práticas e formwizards (FEITO)
-3. Desenvolvimento de testes unitários utilizando Jest (  )
-4. Requests - Axios ( Estava planejando fazer após o back)
+Não satisfeito com o resultado, decidi mais uma vez recomeçar o projeto, dessa vez utilizando o framework correto e boas práticas de arquitetura e código limpo.
+- Novo projeto iniciado dia 27/05
+- Finalizado dia 31/05
 
-## Back
-1. Estudo sobre APIs e desenvolvimento robusto das mesmas. (FEITO -> Curso utilizado https://www.udemy.com/course/criando-apis-robustas-em-c)
-2. Desenvolvimento da API (FEITO PARCIALMENTE)
-2.1 Descobrir que o .NET Framework não funciona para MacOs (FEITO 100%)
-3. Entender a estrutura utilização de um ORM. (  )
-4. Desenvolvimento de testes unitários utilizando MOQ ou XUnity. (  )
-5. Aprender e Utilizar o Docker para a utilização do Postgresql (OK)
+## Roteiro de desenvolvimento
+1. Criação do boilerplate front-end
+2. Criação do design front-end
+3. Desenvolvimento front-end esqueleto
+4. Desenvolvimento front-end formulários e styles
+5. Setup de desenvolvimento back-end
+6. Setup banco de dados
+7. Setup arquitetura
+8. Desenvolvimento .net core api, domain, persistence, application esqueleto
+9. Confiugaração dotnet ef core
+10. Configuração sqlite (inicial)
+11. Configuração controllers, migration, etc.
+12. Troca de sqlite para postgresql
+13. Adição de cors e seguraça na api
+14. Desenvolvimento das requests front-end para back-end
+15. Deploy back-end -> [Heroku](https://salty-anchorage-84863.herokuapp.com/)
+16. Deploy front-end -> [Vercel](https://proradis-challenge.vercel.app/)
+17. Setup Testes unitários front ([jest](https://jestjs.io/)) + back ([xUnit](https://xunit.net/))
+18. Documentação
 
-No final das contas, acredito que foi um grande aprendizado, no entanto ocorreram imprevistos que permitiram descobrir minha própria capacidade como desenvolvedor e onde tenho que melhorar.
+## Informações técnicas
 
-Link dos outros dois projetos de back end:
+### Front
+- VueJs 2
+- Sass
+- Commitlint
+- Jest
+- Axios
+- VueRouter
+- Vue The Mask
+- Vue Toastify
+- Vuejs-datepicker
+- Vuelidate
+- Vuex
 
-1- https://github.com/matheusgomes062/proradis-challenge-back
+A ideia do desenvolvimento do front-end foi utilizar fortemente código limpo e FormWizards, ou seja, o foco seria em ter uma aplicação que não dependese de rotas para trocar de component, assim utilizei o famoso form-wizard para gerenciar os components de formulário. Não só isso mas tudo que era possível componentizar eu componentizei. As próprias requests utilizando axios foram feitas de forma a não repetir código.
 
-2- https://github.com/matheusgomes062/VaccineAPI
+Para fins de evitar perder tempo, tive que recorrer a alumas dependências como o Vue The Mask, que permite adicionar máscaras aos inputs, Vue Toastify, que é um sistema de toastys de sucesso ou fracasso, Vuejs-datepicker, que é um calendário simples em vue, e o Vuelidate, que permite a validação de dados e preenchimento dos mesmos com acesso a erros e avisos.
+
+O store do projeto foi feito de forma escalável também, ou seja, foi utilizado o padrão de módulos para que possa ser fácil adicionar ou remover módulos de state.
+
+Outra facilidade utilizada também foi o lazyloading nas rotas.
+
+No que me comprometi faltou apenas desenvolver testes unitários, aplicar algumas melhorias de UX/UI e por fim fazer uma espécie de dashboard com os dados dos usuários e suas respectivas doses tomadas.
+
+### Back
+- ASP.NET Core 3.1
+- Walking Skeleton
+- 
