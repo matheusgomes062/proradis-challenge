@@ -137,3 +137,4 @@ No que me comprometi faltou apenas desenvolver testes unitários, aplicar alguma
 - CORS
 - Deploy automático no [Heroku](https://salty-anchorage-84863.herokuapp.com/)
 - [SecurityHeaders Nota A](https://securityheaders.com/?q=https%3A%2F%2Fsalty-anchorage-84863.herokuapp.com%2F&followRedirects=on)
+- Docker
