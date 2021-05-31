@@ -10,7 +10,8 @@ Vue.use(VueTheMask);
 Vue.use(vuelidate);
 Vue.use(VueToastify, {
   canTimeout: true,
-  duration: 2000
+  duration: 2000,
+  hideProgressbar: true
 });
 
 Vue.config.productionTip = false;

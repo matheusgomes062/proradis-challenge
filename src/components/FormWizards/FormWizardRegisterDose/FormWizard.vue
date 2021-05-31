@@ -49,6 +49,8 @@
 
 <script>
 import FormDoseDetails from './FormDoseDetails/FormDoseDetails';
+import { api } from '@/services/index';
+
 export default {
   name: 'FormWizard',
   components: {
@@ -60,12 +62,11 @@ export default {
       asyncState: null,
       steps: ['FormDoseDetails'],
       form: {
-        name: null,
-        cpf: null,
-        birthdate: null,
-        email: null,
-        address: null,
-        comorbidity: null
+        applicationDate: null,
+        patientName: null,
+        vaccineName: null,
+        doseApplied: null,
+        completeVaccination: null
       }
     };
   },
@@ -92,9 +93,22 @@ export default {
     },
     submitRegister() {
       this.asyncState = 'pending';
-      console.log('dose form submitted', this.form);
-      this.asyncState = 'success';
-      this.currentStepNumber++;
+      api
+        .post('/PatientVaccines', this.form)
+        .then((response) => {
+          if (response.status == 200) {
+            console.log('Doses form submited');
+            this.asyncState = 'success';
+            this.currentStepNumber++;
+            this.$vToastify.success('Registro de dose confirmada!');
+          } else {
+            this.$vToastify.error('Não foi possível registrar...');
+          }
+        })
+        .catch((error) => {
+          console.log(error.response);
+          this.$vToastify.error('Não foi possível registrar...');
+        });
     },
     nextButtonAction() {
       this.$refs.currentStep
